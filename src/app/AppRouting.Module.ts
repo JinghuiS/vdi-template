@@ -14,19 +14,7 @@ export const AppRoutingModule = vueModule({
                 },
                 {
                     path: '/test',
-                    module: TestModule,
-                    children: [
-                        {
-                            path: '/test/father',
-                            component: () =>
-                                import('@/app/pages/test/TestFatherView.vue')
-                        },
-                        {
-                            path: '/test/self',
-                            component: () =>
-                                import('@/app/pages/test/TestSelfView.vue')
-                        }
-                    ]
+                    module: TestModule
                 }
             ]
         })
