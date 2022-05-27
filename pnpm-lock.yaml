@@ -13,7 +13,7 @@ specifiers:
   eslint-plugin-vue: ^8.2.0
   prettier: ^2.5.1
   typescript: ~4.6.3
-  vdi: ^0.4.1
+  vdi: ^0.4.4
   vite: ^2.9.5
   vue: ^3.2.33
   vue-router: ^4.0.14
@@ -21,7 +21,7 @@ specifiers:
 
 dependencies:
   '@wendellhu/redi': 0.5.0
-  vdi: 0.4.1
+  vdi: 0.4.4
   vue: 3.2.34
   vue-router: 4.0.15_vue@3.2.34
 
@@ -226,7 +226,6 @@ packages:
   /@babel/helper-validator-identifier/7.16.7:
     resolution: {integrity: sha512-hsEnFemeiW4D08A5gUAZxLBTXpZ39P+a+DGDsHw1yxqyQ/jzFEnxf5uTEGp+3bzAbNOxU1paTgYS4ECU/IgfDw==}
     engines: {node: '>=6.9.0'}
-    dev: true
 
   /@babel/helper-validator-option/7.16.7:
     resolution: {integrity: sha512-TRtenOuRUVo9oIQGPC5G9DgK4743cdxvtOw0weQNpZXaS16SCBi5MNjZF8vba3ETURjZpTbVn7Vvcf2eAwFozQ==}
@@ -257,6 +256,8 @@ packages:
     resolution: {integrity: sha512-FLzHmN9V3AJIrWfOpvRlZCeVg/WLdicSnTMsLur6uDj9TT8ymUlG9XxURdW/XvuygK+2CW0poOJABdA4m/YKxA==}
     engines: {node: '>=6.0.0'}
     hasBin: true
+    dependencies:
+      '@babel/types': 7.17.12
 
   /@babel/plugin-syntax-import-meta/7.10.4_@babel+core@7.17.12:
     resolution: {integrity: sha512-Yqfm+XDx0+Prh3VSeEQCPU81yC+JWZ2pDPFSS4ZdpfZhp4MkFMaDC1UqseovEKwSUpnIL7+vK+Clp7bfh0iD7g==}
@@ -334,7 +335,6 @@ packages:
     dependencies:
       '@babel/helper-validator-identifier': 7.16.7
       to-fast-properties: 2.0.0
-    dev: true
 
   /@eslint/eslintrc/1.2.3:
     resolution: {integrity: sha512-uGo44hIwoLGNyduRpjdEpovcbMdd+Nv7amtmJxnKmI8xj6yd5LncmSwDa5NgX/41lIFJtkjD6YdVfgEzPfJ5UA==}
@@ -705,15 +705,19 @@ packages:
     peerDependencies:
       eslint: ^6.2.0 || ^7.0.0 || ^8.0.0
       eslint-plugin-vue: ^8.0.1
+      typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
     dependencies:
       '@typescript-eslint/eslint-plugin': 5.25.0_qo2hgs5jt7x2a3p77h2rutcdae
       '@typescript-eslint/parser': 5.25.0_hcfsmds2fshutdssjqluwm76uu
       eslint: 8.15.0
       eslint-plugin-vue: 8.7.1_eslint@8.15.0
+      typescript: 4.6.4
       vue-eslint-parser: 8.3.0_eslint@8.15.0
     transitivePeerDependencies:
       - supports-color
-      - typescript
     dev: true
 
   /@vue/reactivity-transform/3.2.34:
@@ -735,7 +739,6 @@ packages:
     dependencies:
       '@vue/reactivity': 3.2.34
       '@vue/shared': 3.2.34
-    dev: false
 
   /@vue/runtime-dom/3.2.34:
     resolution: {integrity: sha512-uqizbaJqmNH3O4TRr+8cM1tid5ODWHyQYZ3CLWcjn3dLkf0N7wvNuhUELQUZU/wQLvVMhJUQNrmOqckHLm6Xpw==}
@@ -743,7 +746,6 @@ packages:
       '@vue/runtime-core': 3.2.34
       '@vue/shared': 3.2.34
       csstype: 2.6.20
-    dev: false
 
   /@vue/server-renderer/3.2.34_vue@3.2.34:
     resolution: {integrity: sha512-PMnBAq1BexPFXBxuLngp4lQvc0XQD1CBDIHtEsG0pRusGWVJddBUKlR/EnnSvGaJ34YmKkAl9kdvczOz0kddew==}
@@ -753,7 +755,6 @@ packages:
       '@vue/compiler-ssr': 3.2.34
       '@vue/shared': 3.2.34
       vue: 3.2.34
-    dev: false
 
   /@vue/shared/3.2.34:
     resolution: {integrity: sha512-zhEeB8TrFmTXmTXmu/wcjEhgrjO4xqdDQrCdPhjX7NxfoLqoBVKguOm8qyihWNLbP+41svYY4za9mqXyqFLzNg==}
@@ -940,7 +941,6 @@ packages:
 
   /csstype/2.6.20:
     resolution: {integrity: sha512-/WwNkdXfckNgw6S5R125rrW8ez139lBHWouiBvX8dfMFtcn6V81REDqnH7+CRpRipfYlyU1CmOnOxrmGcFOjeA==}
-    dev: false
 
   /debug/4.3.4:
     resolution: {integrity: sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==}
@@ -1906,7 +1906,6 @@ packages:
   /to-fast-properties/2.0.0:
     resolution: {integrity: sha1-3F5pjL0HkmW8c+A3doGk5Og/YW4=}
     engines: {node: '>=4'}
-    dev: true
 
   /to-regex-range/5.0.1:
     resolution: {integrity: sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==}
@@ -1961,8 +1960,8 @@ packages:
     resolution: {integrity: sha512-l8lCEmLcLYZh4nbunNZvQCJc5pv7+RCwa8q/LdUx8u7lsWvPDKmpodJAJNwkAhJC//dFY48KuIEmjtd4RViDrA==}
     dev: true
 
-  /vdi/0.4.1:
-    resolution: {integrity: sha512-giT+ccY4vJMfLxXC+CmChvl8EdjSauxt1rbpraX5ZpUyoUwpo/oWV7JMB9IsP0Jys5nT3K0ttu5wLRtkpNJJrg==}
+  /vdi/0.4.4:
+    resolution: {integrity: sha512-ciLbDOMirpFDnU3LPpPFBpqS6OrJhtFmVb61HwdpblcSzkq9kzRfGfbLkpG/ZABDqBpclZHKSihwPPQll3eUvw==}
     dependencies:
       '@wendellhu/redi': 0.5.0
       vue: 3.2.34
@@ -2041,7 +2040,6 @@ packages:
       '@vue/runtime-dom': 3.2.34
       '@vue/server-renderer': 3.2.34_vue@3.2.34
       '@vue/shared': 3.2.34
-    dev: false
 
   /which/2.0.2:
     resolution: {integrity: sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==}
