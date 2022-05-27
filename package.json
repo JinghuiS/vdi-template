@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@wendellhu/redi": "^0.5.0",
-    "vdi": "^0.4.4",
+    "vdi": "^0.4.5",
     "vue": "^3.2.33",
     "vue-router": "^4.0.14"
   },

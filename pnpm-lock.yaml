@@ -13,7 +13,7 @@ specifiers:
   eslint-plugin-vue: ^8.2.0
   prettier: ^2.5.1
   typescript: ~4.6.3
-  vdi: ^0.4.4
+  vdi: ^0.4.5
   vite: ^2.9.5
   vue: ^3.2.33
   vue-router: ^4.0.14
@@ -21,7 +21,7 @@ specifiers:
 
 dependencies:
   '@wendellhu/redi': 0.5.0
-  vdi: 0.4.4
+  vdi: 0.4.5
   vue: 3.2.34
   vue-router: 4.0.15_vue@3.2.34
 
@@ -1960,8 +1960,8 @@ packages:
     resolution: {integrity: sha512-l8lCEmLcLYZh4nbunNZvQCJc5pv7+RCwa8q/LdUx8u7lsWvPDKmpodJAJNwkAhJC//dFY48KuIEmjtd4RViDrA==}
     dev: true
 
-  /vdi/0.4.4:
-    resolution: {integrity: sha512-ciLbDOMirpFDnU3LPpPFBpqS6OrJhtFmVb61HwdpblcSzkq9kzRfGfbLkpG/ZABDqBpclZHKSihwPPQll3eUvw==}
+  /vdi/0.4.5:
+    resolution: {integrity: sha512-kYzz8vfKFzd1WY5KQOAxYB6fQMdOTd06FIJqJXf/N75FSLZzhm7B79nSZguA50CO57dAmHcpWs+TI54fIxgP1A==}
     dependencies:
       '@wendellhu/redi': 0.5.0
       vue: 3.2.34
